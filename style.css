@@ -1,0 +1,151 @@
+/* Style for the container that wraps all sections */
+[data-theme="light"] {
+  /* Light theme styles */
+  body {
+  background-color: rgb(11, 160, 160);
+  }
+  #allSongSection,
+#create-playlist {
+  background-color: #55bcdb;
+}
+.song-item{
+  background-color: #aad3e6;
+}
+button{
+  background-color: #007bff;
+}
+  
+}
+
+[data-theme="dark"]   {
+  /* Dark theme styles */
+  body{
+  background-color: #333;
+  }
+  #allSongSection,
+  #create-playlist {
+    background-color: #6f6969;
+  }
+  .song-item{
+    background-color: #ffffff8e;
+  }
+  button{
+    background-color: #47374a;
+  }
+}
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px; /* Optional padding for better appearance */
+  
+  
+}
+
+section {
+  margin: 20px;
+  
+}
+
+#allSongSection,
+#create-playlist {
+  background-color: #55bcdb;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(7, 7, 7, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#all-songs {
+  margin-bottom: 20px;
+}
+
+#song-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.song-item {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  
+  transition: background-color 0.3s;
+}
+
+
+.song-item:hover {
+  background-color: #f0f0f0;
+}
+
+#songCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+#selected-song {
+  text-align: center;
+}
+
+img {
+  max-width: 100%; /* Set the width as needed */
+  height: 200px; /* Set the height as needed */
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+button {
+  
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#create-playlist input[type="text"],
+#create-playlist button {
+  margin-top: 10px;
+}
+
+#playlist-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.playlist, .songlist {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+
+.playlist :hover {
+  background-color: #f0f0f0;
+}
+
+#current-playlist {
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+
