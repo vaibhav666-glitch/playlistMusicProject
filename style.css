@@ -48,6 +48,8 @@ section {
   
 }
 
+
+
 #allSongSection,
 #create-playlist {
   background-color: #55bcdb;
@@ -104,6 +106,10 @@ img {
   margin-right: 10px;
 }
 
+audio {
+  width: 100%; /* Make the audio player full-width */
+  margin-top: 10px; /* Adjust the margin as needed */
+}
 button {
   
   color: #fff;

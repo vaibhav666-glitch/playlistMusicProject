@@ -1,14 +1,14 @@
 const songs = [
-    { id: 1, name: 'mockingBird', artist: 'Eminem', img: 'maxresdefault.jpg', genre: 'hip-hop' },
-    { id: 2, name: 'shapeOfYou', artist: 'Ed sheran', img: 'mqdefault.jpg', genre: 'pop' },
-    { id: 3, name: 'mai parwana', artist: 'arijit singh', img: 'download.jpg', genre: 'romantic' },
-    { id: 4, name: 'gooseBump', artist: 'Travis Scot', img: 'download.jpg', genre: 'mumble' },
-    { id: 5, name: 'ram siya ram', artist: 'nehal paddoo', img: 'download.jpg', genre: 'religious' },
-    { id: 6, name: 'ram ayenge', artist: 'nehal paddoo', img: 'download.jpg', genre: 'religious' },
-    { id: 7, name: '9-45', artist: 'nihal', img: 'download.jpg', genre: 'punjabi' },
-    { id: 8, name: 'praise the lord', artist: 'Asap rocky', img: 'download.jpg', genre: 'mumble' },
-    { id: 9, name: '275', artist: 'sidhu moosewala', img: 'download.jpg', genre: 'punjabi' },
-    { id: 10, name: 'jingle bell', artist: 'Honey singh', img: 'download.jpg', genre: 'hip-hop' }
+    { id: 1, name: 'mockingBird', artist: 'Eminem', img: 'maxresdefault.jpg', genre: 'hip-hop' , sources: "Mockingbird_192(PaglaSongs).mp3"},
+    { id: 2, name: 'shapeOfYou', artist: 'Ed sheran', img: 'mqdefault.jpg', genre: 'pop' , sources: "Shape-of-You---Ed-Sheeran(musicdownload.cc).mp3"},
+    { id: 3, name: 'mai parwana', artist: 'arijit singh', img: 'maiParwana.png', genre: 'romantic' , sources: "Main-Parwaana-Tera-Naam-Batana(PagalWorlld.Com).mp3"},
+    { id: 4, name: 'gooseBump', artist: 'Travis Scot', img: 'download.jpg', genre: 'mumble' , sources: "Travis-Scott-goosebumps.mp3"},
+    { id: 5, name: 'chaleya', artist: 'arijit singh', img: 'chaleya-song-141618193-1x1.webp', genre: 'romantic' , sources: "CHALEYA-SONG---JAWAN(musicdownload.cc).mp3"},
+    { id: 6, name: 'lovin on me', artist: 'jack Harlow', img: 'lovin on me.jpeg', genre: 'hip-hop' , sources: "Mockingbird_192(PaglaSongs).mp3"},
+    { id: 7, name: 'night Changes', artist: 'one direction', img: 'onedirection.jpg', genre: 'pop' , sources: "Mockingbird_192(PaglaSongs).mp3"},
+    { id: 8, name: 'praise the lord', artist: 'Asap rocky', img: 'praiseTheLord.jpg', genre: 'mumble' , sources: "Mockingbird_192(PaglaSongs).mp3"},
+    { id: 9, name: '295', artist: 'sidhu moosewala', img: '295.jpg', genre: 'punjabi' , sources: "Mockingbird_192(PaglaSongs).mp3"},
+    { id: 10, name: 'jingle bell', artist: 'Honey singh', img: 'jingleBell.jpg', genre: 'hip-hop' , sources: "Mockingbird_192(PaglaSongs).mp3"}
 ];
 
 
@@ -78,6 +78,20 @@ function renderCurrentSong(song) {
     const songInfo = document.createElement('div');
     songInfo.innerHTML = `<strong>${song.name}</strong> - ${song.artist}`;
 
+
+    const audio = document.createElement('audio');
+    audio.controls = true;
+    audio.autoplay = true;
+    const source = document.createElement('source');
+    source.src=song.sources;
+    source.type='audio/mp3'
+    audio.appendChild(source);
+  
+    
+
+    
+
+
     // Create control buttons
     const previousButton = document.createElement('button');
     previousButton.textContent = 'Previous';
@@ -94,6 +108,7 @@ function renderCurrentSong(song) {
     // Append elements to the song card
     songCard.appendChild(imageElement);
     songCard.appendChild(songInfo);
+    songCard.appendChild(audio);
     songCard.appendChild(previousButton);
     songCard.appendChild(nextButton);
     songCard.appendChild(addToPlaylistButton);
