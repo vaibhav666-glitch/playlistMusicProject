@@ -87,11 +87,6 @@ function renderCurrentSong(song) {
     source.type='audio/mp3'
     audio.appendChild(source);
   
-    
-
-    
-
-
     // Create control buttons
     const previousButton = document.createElement('button');
     previousButton.textContent = 'Previous';
